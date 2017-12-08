@@ -1,0 +1,592 @@
+/*
+==============
+CSS for - Muhammad Adam Firdaus Personal Web 2017
+Muhammad Adam Firdaus 2016
+==============
+ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, section {
+	display: block;
+}
+
+html, body {
+	margin:0;
+	padding:0;
+	height:100%;
+}
+
+body {
+	font-family:"Manaspace";
+}
+
+img,
+svg {
+	display:block;
+}
+
+svg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+	min-height:100%;
+	position:relative;
+}
+
+footer {
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+}
+
+.col {
+	float:left;
+}
+
+.tengah {
+	margin:0 auto;
+}
+
+audio,
+.hidden,
+#tulisan-1,
+.orang {
+	display: none;
+}
+
+.show,
+.orang-1,
+.orang-2,
+.orang-3	{
+	display: block;
+}
+
+#cafe-interior {
+	height: 100%;
+}
+
+/*.preload {
+	width:100%;
+	height:100%;
+	position:fixed;
+	background:rgba(0,0,0,0.8);
+} */
+
+@font-face {
+  font-family: 'Digitaltech';
+	src:	url('fonts/Digitaltech.eot?#iefix') format('embedded-opentype'),
+				url('fonts/Digitaltech.woff') format('woff'),
+				url('fonts/Digitaltech.ttf')  format('truetype'),
+				url('fonts/Digitaltech.svg#Digitaltech') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Manaspace';
+	src:	url('fonts/Manaspace.eot?#iefix') format('embedded-opentype'),
+				url('fonts/Manaspace.woff') format('woff'),
+				url('fonts/Manaspace.ttf')  format('truetype'),
+				url('fonts/Manaspace.svg#Manaspace') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* mulai dari bawah ini */
+
+/* audio */
+
+.audio {
+	cursor: pointer;
+	width: 32px;
+	height: 32px;
+	background: url(../images/audio.png) no-repeat;
+	position: fixed;
+	bottom:20px;
+	right:20px;
+}
+
+.audio-mute {
+	background: url(../images/audio-mute.png) no-repeat;
+}
+
+.audio,
+.audio-mute {
+	transition: background 0.8s ease;
+	z-index: 10;
+}
+
+.for-svg svg {
+	width:100%;
+	position: relative;
+}
+
+.container-city {
+	background:#666666;
+}
+
+#background-museum-interior,
+#museum-interior, {
+	background:#fff;
+	width:100%;
+	height:100%;
+}
+
+main {
+	background:#666666;
+}
+
+.fixed-bottom {
+	position: fixed;
+	bottom:-200px;
+	left:0;
+	width:100%;
+	z-index: 9;
+}
+
+.profile-pic,
+.dialogue-button,
+.text {
+	height:100%;
+}
+
+.profile-pic,
+.dialogue-button {
+	width:15%;
+}
+
+.sidebar {
+	position: absolute;
+	top:0;
+	width:100%;
+	height:100%;
+}
+
+.profile-pic {
+	float:left;
+}
+
+.dialogue-button {
+	float:right;
+}
+
+.text {
+	width: 70%;
+}
+
+.profile-pic,
+.dialogue-button {
+	display: table;
+	position: relative;
+}
+
+.profile-pic a,
+.dialogue-button a {
+	display: table-cell;
+	vertical-align: middle;
+	text-decoration: none;
+}
+
+.profile-pic img {
+	border-radius:50%;
+	border:2px solid #fff;
+	margin:0 auto;
+	z-index: 9;
+}
+
+.dialogue {
+	background:url(../images/noise.png);
+	background-color:#333;
+	color:#fff;
+	font-family: 'Manaspace';
+}
+
+.dialogue p {
+	padding:1% 2% 0 2%;
+	overflow: hidden;
+	z-index:1;
+}
+
+.dialogue p:first-child {
+	padding-top:2%;
+}
+
+.dialogue-lg {
+	font-size:20px;
+	line-height:30px;
+	width:80%;
+	height:136px;
+	margin:0 auto;
+}
+
+.dialogue-up {
+	-webkit-animation: up 1s ease-in;
+	animation: up 1s ease-in;
+	animation-fill-mode: forwards;
+}
+
+.dialogue-down {
+	-webkit-animation: down 1s ease-out;
+	animation: down 1s ease-out;
+	animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes up {
+	0%		{transform:translate(0, 0);}
+	100%		{transform:translate(0, -200px);}
+}
+
+@keyframes up {
+	0%		{transform:translate(0, 0);}
+	100%		{transform:translate(0, -200px);}
+}
+
+@-webkit-keyframes down {
+	0%		{transform:translate(0, -200px);}
+	100%		{transform:translate(0, 0);}
+}
+
+@keyframes down {
+	0%		{transform:translate(0, -200px);}
+	100%		{transform:translate(0, 0);}
+}
+
+.button {
+	font-family: 'Digitaltech', arial;
+	letter-spacing: 3px;
+	text-align: center;
+	text-transform: uppercase;
+	-webkit-animation:	bouncing 0.3s infinite linear;
+	animation:	bouncing 0.3s infinite linear;
+}
+
+@-webkit-keyframes bouncing {
+	0%		{transform:translate(0, 0);}
+	100%		{transform:translate(0, 2px);}
+}
+
+.button-lg {
+	width:80px;
+	height:50px;
+	font-size:22px;
+	line-height: 50px;
+	padding-left:5px;
+}
+
+.button-blue {
+	background:#03a9f4;
+	border-bottom:4px inset #0091ea;
+	color:#fff;
+}
+
+/*.text {
+	word-wrap: break-word;
+}
+
+.typing {
+	width: 100%;
+  white-space: pre-line;
+	word-wrap: break-word;
+  overflow:hidden;
+  -webkit-animation: type 5s steps(50, end);
+  animation: type 5s steps(50, end);
+}*/
+
+@-webkit-keyframes type {
+    from { width: 0; }
+}
+
+@keyframes type {
+    from { width: 0; }
+}
+
+/* core animations */
+
+.orang {
+	z-index: 1;
+}
+
+@-webkit-keyframes orang-bergerak {
+	0%		{background-position:0}
+	100%	{background-position: -400px;}
+}
+
+@keyframes orang-bergerak {
+	0%		{background-position:0}
+	100%	{background-position:-400px;}
+}
+
+/* begin orang-1 */
+
+@-webkit-keyframes orang-1 {
+	0%	{transform:translate(0, 0);}
+	100%	{transform:translate(-5000px, 0);}
+}
+
+@keyframes orang-1 {
+	0%	{transform:translate(0, 0);}
+	100%	{transform:translate(-5000px, 0);}
+}
+
+.orang-1 {
+	-webkit-animation:	orang-1 50s infinite linear;
+	animation:	orang-1 50s infinite linear;
+
+	position:absolute;
+	right:180px;
+	bottom:40px;
+}
+
+.orang-baju-hijau-1 {
+	background:url(../images/orang-1.svg);
+	background-size:cover;
+	width:50px;
+	height:90px;
+	-webkit-animation:	orang-bergerak 1s steps(8) infinite;
+	animation:	orang-bergerak 1s steps(8) infinite;
+}
+
+/* end orang-1 */
+
+/* begin orang-2 */
+
+@-webkit-keyframes orang-2 {
+	0%	{transform:translate(0, 0);}
+	100%	{transform:translate(-5000px, 0);}
+}
+
+@keyframes orang-2 {
+	0%	{transform:translate(0, 0);}
+	100%	{transform:translate(-5000px, 0);}
+}
+
+.orang-2 {
+	-webkit-animation:	orang-2 55s infinite 0.2s linear;
+	animation:	orang-2 55s infinite 0.2s linear;
+	display: block;
+	position:absolute;
+	right:-220px;
+	bottom:40px;
+}
+
+.orang-baju-merah-1 {
+	background:url(../images/orang-2.svg);
+	background-size:cover;
+	width:50px;
+	height:90px;
+	-webkit-animation:	orang-bergerak 1s steps(8) infinite;
+	animation:	orang-bergerak 1s steps(8) infinite;
+}
+
+/* end orang-2 */
+
+/* begin orang-3 */
+
+@-webkit-keyframes orang-3 {
+	0%	{transform:translate(0, 0);}
+	100%	{transform:translate(5000px, 0);}
+}
+
+@keyframes orang-3 {
+	0%	{transform:translate(0, 0);}
+	100%	{transform:translate(5000px, 0);}
+}
+
+.orang-3 {
+	-webkit-animation:	orang-3 50s infinite linear;
+	animation:	orang-3 50s infinite linear;
+
+	position:absolute;
+	right:350px;
+	bottom:40px;
+}
+
+.orang-baju-indigo-1 {
+	background:url(../images/orang-3.svg);
+	background-size:cover;
+	width:50px;
+	height:90px;
+	-webkit-animation:	orang-bergerak 1s steps(8) infinite;
+	animation:	orang-bergerak 1s steps(8) infinite;
+}
+
+/* end orang-2 */
+
+/* museum */
+#achievement-1 {
+	position: relative;
+}
+.achievement-1-image {
+	position: absolute;
+	top:10px;
+	left:100px;
+	width:190px;
+	height:106px;
+	z-index: 9;
+}
+
+/*.door-closed {
+	width: 100px;
+	height: 80px;
+	background: #fff;
+	border: 2px solid #F44336;
+	color: #F44336;
+	font-family: 'Digitaltech', arial;
+	font-size: 16px;
+	line-height: 26px;
+}*/
+
+#door-shop:hover,
+#door-martabucks:hover {
+	opacity: 0;
+	transition: 0.3s ease;
+}
+
+.pintu {
+	opacity: 0;
+	transition: all 0.2s ease;
+}
+
+.closed {
+	opacity: 1;
+	-webkit-transform: translate(0, -15px);
+	transform: translate(0, -15px);
+	transition: all 0.2s ease-in;
+}
+
+@media screen and (max-width:800px) {
+	a {
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+	}
+
+	a:active {
+		background:rgba(0,0,0,0);
+	}
+
+	svg {
+		position: relative;
+		width: 1200px;
+	}
+
+	.orang-1,
+	.orang-2,
+	.orang-3 {
+		bottom: 20px;
+	}
+
+	/* adjust this fixed bottom and dialogue-lg height each devices screen */
+	.fixed-bottom {
+		position: absolute;
+		bottom:-420px;
+	}
+
+	.dialogue-lg {
+		height: 420px;
+	}
+
+	.for-dialouge {
+		width: 80%;
+	}
+
+	.profile-pic,
+	.dialogue-button {
+		float: none;
+		width: 100%;
+	}
+
+	.profile-pic a {
+		display: block;
+		padding: 15px 0;
+	}
+
+	.dialogue-button {
+		position: absolute;
+		bottom: 0;
+	}
+
+	.dialogue-button a {
+		vertical-align: bottom;
+	}
+
+	.button-lg {
+		margin-bottom: 50px;
+	}
+
+	.dialogue p:first-child {
+		margin-top: 140px;
+	}
+
+	.dialogue p {
+		padding: 1% 0 0 0;
+	}
+
+	@-webkit-keyframes up {
+		0%		{transform:translate(0, 0);}
+		100%		{transform:translate(0, -400px);}
+	}
+
+	@keyframes up {
+		0%		{transform:translate(0, 0);}
+		100%		{transform:translate(0, -400px);}
+	}
+
+	@-webkit-keyframes down {
+		0%		{transform:translate(0, -400px);}
+		100%		{transform:translate(0, 0);}
+	}
+
+	@keyframes down {
+		0%		{transform:translate(0, -400px);}
+		100%		{transform:translate(0, 0);}
+	}
+}
